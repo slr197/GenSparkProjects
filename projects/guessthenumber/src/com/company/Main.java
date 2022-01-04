@@ -1,10 +1,10 @@
-package com.company;
+
 
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static String main(String[] args) {
 	// write your code here
         boolean game = true;
         while(game) {
@@ -19,11 +19,19 @@ public class Main {
                 System.out.println("TIME TO PLAYYYY!");
                 //keyboard.nextInt =
                 System.out.println("Enter a number between 1 - 20.");
-                guesstheNumber = keyboard.nextInt();
+                try {
+                    guesstheNumber = keyboard.nextInt();
+                } catch (Exception e) {
+                    return("Caught Exception: Unexpected Input");
+                }
                 if (guesstheNumber == guessingNumber) {
                     System.out.println("You guessed the number right!");
                     System.out.println("Would you like to play again y or n?");
-                    res = keyboard.next();
+                    try {
+                        res = keyboard.next();
+                    } catch (Exception e) {
+                        return("Caught Exception: Unexpected Input");
+                    }
                     //.equals=
                     if (res.equals("n")) {
                         game = false;
@@ -38,5 +46,6 @@ public class Main {
             } while ((guesstheNumber != guessingNumber) && (numTries > 0));
             System.out.println(guesstheNumber);
         }
+        return null;
     }
 }
