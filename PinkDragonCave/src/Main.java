@@ -18,9 +18,11 @@ public class Main {
         if (option == 1)
             return choiceOne();
 
-        if (option == 2)
+        else if (option == 2)
+            return choiceTwo();
+
+        else
             return invalid();
-        return null;
     }
     public String begin() {
         return ("\nYou are in a land full of dragons. In front of you,\n" +
