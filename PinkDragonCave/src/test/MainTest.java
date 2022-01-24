@@ -3,7 +3,7 @@ package test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.*;
 
-import java.Main;
+import coffee.Main;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -19,11 +19,11 @@ class MainTest {
 
     @Test
     void start() {
-        assertEquals("\nYou are in a land full of dragons. In front of you,\n\" +\n" +
-                "                \"you see two caves. In one cave, the dragon is friendly\n\" +\n" +
-                "                \"and will share his treasure with you. The other dragon\n\" +\n" +
-                "                \"is greedy and hungry and will eat you on sight!\n\" +\n" +
-                "                \"Which cave will you go into? choose 1 or 2..\n", main.begin());
+        assertEquals("\nYou are in a land full of dragons. In front of you,\n" +
+                "you see two caves. In one cave, the dragon is friendly\n" +
+                "and will share his treasure with you. The other dragon\n" +
+                "is greedy and hungry and will eat you on sight!\n" +
+                "Which cave will you go into? choose 1 or 2..\n", main.begin());
     }
 
     @Test
@@ -34,27 +34,27 @@ class MainTest {
 
     @Test
     void begin() {
-        assertEquals("\nYou are in a land full of dragons. In front of you,\n\" +\n" +
-                "                \"you see two caves. In one cave, the dragon is friendly\n\" +\n" +
-                "                \"and will share his treasure with you. The other dragon\n\" +\n" +
-                "                \"is greedy and hungry and will eat you on sight!\n\" +\n" +
-                "                \"Which cave will you go into? choose 1 or 2..\n", main.begin());
+        assertEquals("\nYou are in a land full of dragons. In front of you,\n" +
+                "you see two caves. In one cave, the dragon is friendly\n" +
+                "and will share his treasure with you. The other dragon\n" +
+                "is greedy and hungry and will eat you on sight!\n" +
+                "Which cave will you go into? choose 1 or 2..\n", main.begin());
     }
 
     @Test
     void choiceOne() {
-        assertEquals("\nYou approach the cave...\n\" +\n" +
-                "                \"And a bright beam of light appears!\n\" +\n" +
-                "                \"Next thing you know, you're on the back of a large (but friendly) dragon!\n\" +\n" +
-                "                \"You and your new dragon friend soar off into the infinite realm with his treasure, never to be seen again...",main.choiceOne());
+        assertEquals("\nYou approach the cave...\n" +
+                "And a bright beam of light appears!\n" +
+                "Next thing you know, you're on the back of a large (but friendly) dragon!\n" +
+                "You and your new dragon friend soar off into the infinite realm with his treasure, never to be seen again...",main.choiceOne(),"invalid failed");
     }
 
     @Test
     void choiceTwo() {
-        assertEquals("\nYou approach the cave...\n\" +\n" +
-                "                \"It is dark and spooky...\n\" +\n" +
-                "                \"A large dragon jumps out in front of you! He opens his jaws and...\n\" +\n" +
-                "                \"Gobbles you down in one bite!\n",main.choiceTwo());
+        assertEquals("\nYou approach the cave...\n" +
+                "It is dark and spooky...\n" +
+                "A large dragon jumps out in front of you! He opens his jaws and...\n" +
+                "Gobbles you down in one bite!\n",main.choiceTwo(), "invalid failed");
     }
 
     @Test
